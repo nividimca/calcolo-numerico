@@ -23,15 +23,14 @@ hold off;
 
 if n > 0 && n < nmax
   disp(['Ultima soluzione approssimata calcolata: ', num2str(xv(n))]);
-  disp(['Ultimo scarto calcolata: ', num2str(scarti(n-2))]);
+  disp(['Ultimo scarto calcolato: ', num2str(scarti(length(scarti)))]);
   residuo = f(xv(n));
   disp(['Ultimo residuo calcolato: ', num2str(residuo)]);
   disp(['Indice dell''ultima iterata calcolata: ', num2str(n-1)]);
   
   figure(2) 
-  %iter = (n-2);
-  %semilogy(1:iter, abs(scarti),'m*-');
-  semilogy(n-2, abs(scarti),'m*-');
+  iter = 1:length(scarti);
+  semilogy(iter, abs(scarti));
   hold on
   grid on;
   title('Andrea Favero 1125545');
@@ -42,14 +41,13 @@ if n > 0 && n < nmax
   hold off;
   
   %Stampa a video dei risultati mediante un ciclo for
-  fprintf('\n [n]: %2.0f \t [xv]: %10.15f: ',0,xv(1));
+  fprintf('\n [n]: %2.0f \t [xv]: %10.15f: ',1,xv(1));
   for k=2:n-2
   fprintf('\n [n]: %2.0f \t [xv]: %10.15f \t [scarti]: %10.2e',k,xv(k),scarti(k-1));
   end
   fprintf('\n [n]: %2.0f \t [xv]: %10.15f \t [scarti]: %10.2e',n-1,xv(n-1),scarti(n-2));
   fprintf('\n [n]: %2.0f \t [xv]: %10.15f ',n,xv(n));
   fprintf('\n');
-  
 elseif n == nmax
   error('errore, lo script ha effettuato n = nmax iterazioni\n');
 end
