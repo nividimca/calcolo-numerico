@@ -21,12 +21,7 @@ function fxstar = hornerN (x,c,xstar)
   end
   fxstar = c(n1);
   
-  for j = n1-1 : -1 : 1 %metto -1 perché faccio step di -1 da 8 fino a 1
+  for j = n1-1 : -1 : 1 %metto -1 perchï¿½ faccio step di -1 da 8 fino a 1
       fxstar = fxstar .* (xstar - x(j)) + c(j);
   end
 end
-
-
-%nell'essercizio per casa uasre la norma infinito
-%norm(v,inf)
-%fid = fopen('tabellaini

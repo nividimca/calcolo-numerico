@@ -19,8 +19,3 @@ y=feval(f,x);
 % Calcola i coefficienti del polinomio con la base di Newton usando
 % la function polnewton
 c = polnewton (x,y)
-
-
-
-%polyfit e' un comando che nasce per fare approssimazione
-%non interpolazione

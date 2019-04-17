@@ -1,7 +1,7 @@
 %====================================================================
 % Andrea Favero 1125545
 % Esercizio 7 da consegnare nel moodle:
-% modifica di interp, si utilizzano polyval e polyfit e chebgauss
+% modifica di interp, si utilizzano polyval, polyfit e chebgauss
 % testo consegna:
 % Consegnare la igura (salvata in formato pdf) creata usando il comando subplot
 % che contenga i seguenti due grafici: grafico della funzione di Runge, il suo

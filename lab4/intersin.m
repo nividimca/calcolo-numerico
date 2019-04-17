@@ -27,3 +27,5 @@ title(string);
 legend('sin(x)','interpolante','punti');
 
 %il modo in cui polyfit calcola i coefficienti e' mal condizionato
+%polyfit e' un comando che nasce per fare approssimazione
+%non interpolazione

@@ -1,7 +1,7 @@
 %====================================================================
 % Andrea Favero 1125545
 % Esercizio 7:
-% modifica di interp, si utilizzano polyval e polyfit e chebgauss
+% modifica di interp, si utilizzano polyval e polyfit
 %====================================================================
 % Definisce la funzione
 f=@(x) 1./(1+x.^2);
