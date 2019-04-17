@@ -3,7 +3,7 @@
 n = input('Introdurre numero di punti: ');
 a = -5;
 b = 5;
-%calcolo i nod (equispaziati)
+%calcolo i nodi(equispaziati)
 x = linspace(a,b,n);
 y = sin(x); %ordinate dei punti da interpolare
 

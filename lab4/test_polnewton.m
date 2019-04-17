@@ -24,4 +24,3 @@ c = polnewton (x,y)
 
 %polyfit e' un comando che nasce per fare approssimazione
 %non interpolazione
-

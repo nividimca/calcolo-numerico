@@ -1,26 +1,28 @@
-% DA TERMINARE
-%-----------------------------------------------------------------------
-% HORNERN 
+% Andrea Favero 1125545
+% HORNERN Calcola il valore del polinomio interpolatore in x^*
+% utilizzando la forma di Newton e l'algoritmo di Horner
 %
 % Uso:
-% u = horner(x,c,xstar)
+% fxstar = hornerN (x,c,xstar)
 %
 % Dati di ingresso:
-% x     vettore dei 
-% y     vettore dei 
+% x vettore dei nodi
+% c vettore dei coefficienti della forma di Newton
+% ordinati per indici crescenti (c_0, c_1, ... )
+% xstar valore in cui si vuole valutare il polinomio
 %
 % Dati di uscita:
-% u     
+% fxstar valore di P(x^*)
 
-function [u] = hornerN(x,c,xstar)
-  n1 = legth(x);
+function fxstar = hornerN (x,c,xstar)
+  n1 = length(x);
   if n1 ~= length(c)
      error('Errore. Inconsistente numero di componenti. Stop.'); 
   end
-  u = c(n1);
+  fxstar = c(n1);
   
-  for j = n1-1 : 1 : step -1
-      
+  for j = n1-1 : -1 : 1 %metto -1 perché faccio step di -1 da 8 fino a 1
+      fxstar = fxstar .* (xstar - x(j)) + c(j);
   end
 end
 
