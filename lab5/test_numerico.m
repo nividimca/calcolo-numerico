@@ -12,8 +12,8 @@ toll = 10e-10;
 nmax = 50;
 
 [xv,fxv,n,flag] = metodo_halley(f,f1,f2,x0, toll, nmax);
-% n = length(xv) -1, visto che xv contiene anche x0 e f(x0) che non sono iterate
-% ed n � il contatore delle iterate effettuate
+% n = length(xv) -1, visto che xv contiene anche x0, che non è stato ottenuto iterando
+% ed n è il contatore delle iterazioni effettuate
 
 if flag == 1
     disp('Denominatore dell''ultima iterata nullo');
