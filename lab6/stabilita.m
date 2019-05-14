@@ -8,7 +8,7 @@ epsilon = 1e-14;
 A = [1 1 -3; 2 2-epsilon 4; 1 9 4];
 b = A* xvera;
 disp('Usando la fattorizzazione LU calcolata senza pivoting')
-[L,U] = lugauss(A);
+[L,U] = lugauss(A); %per casa sostituire a questo lu di matlab e cambiare sotto con roba che ancora non ho capito
 disp('A - LU')
 A - L*U
 y = L\b;
